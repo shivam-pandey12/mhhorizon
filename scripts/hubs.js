@@ -36,12 +36,13 @@ window.MHHorizonHubs = [
     status: "Live Node",
     state: "live",
     featured: true,
+    logo: "recipifyhub.png",
     description:
-      "A culinary hub for recipe discovery, food inspiration, and beautifully organized meal ideas.",
+      "The live MH Horizon food destination for recipe discovery, meal ideas, and beautifully organized cooking inspiration.",
     tagline: "Taste-first browsing with a clean recipe gateway.",
-    features: ["Recipe collections", "Food storytelling", "Organized navigation"],
-    link: "#",
-    note: "Direct launch routing for this node will appear here when the public Recipify Hub link goes live.",
+    features: ["Live at recipify.mhhorizons.com", "Recipe collections", "Food inspiration"],
+    link: "https://recipify.mhhorizons.com/",
+    note: "Online now at recipify.mhhorizons.com.",
   },
   {
     id: "focusforge",
