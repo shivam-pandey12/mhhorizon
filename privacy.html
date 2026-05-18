@@ -35,6 +35,15 @@
         localStorage.getItem("mh-horizon-theme") || "dark";
       document.documentElement.classList.add("is-preload");
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSSGVSC9X3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MSSGVSC9X3');
+    </script>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -98,7 +107,7 @@
             <p class="section-label">Legal page</p>
             <h1 class="page-title">Privacy Policy</h1>
             <p class="page-subtitle">
-              Last updated: May 4, 2026. This policy covers MH Horizon as the
+              Last updated: May 18, 2026. This policy covers MH Horizon as the
               static gateway layer that introduces and routes visitors to
               independent hubs.
             </p>
@@ -107,7 +116,7 @@
 
         <section class="legal-doc section">
           <aside class="legal-toc reveal" aria-label="Privacy policy sections">
-            <span class="legal-updated">Last updated May 4, 2026</span>
+            <span class="legal-updated">Last updated May 18, 2026</span>
             <a href="#privacy-scope">Scope</a>
             <a href="#privacy-data">Information collected</a>
             <a href="#privacy-hubs">Independent hubs</a>
@@ -130,9 +139,9 @@
               <h2>2. Information collected</h2>
               <p>
                 The current frontend build does not include a backend, user
-                accounts, payment flow, or direct form submission system. If
-                analytics, cookies, or third-party embeds are added later, this
-                policy should be updated before those systems are enabled.
+                accounts, payment flow, or direct form submission system. The
+                site uses Google Analytics through the Google tag to understand
+                aggregate page views, traffic sources, and basic site usage.
               </p>
             </article>
 
@@ -148,10 +157,11 @@
             <article class="legal-card reveal" id="privacy-cookies">
               <h2>4. Cookies and analytics</h2>
               <p>
-                No dedicated cookie consent or analytics layer is included in this
-                version of the site. If tracking tools are introduced later,
-                consent messaging and disclosures should be added before they are
-                enabled.
+                Google Analytics is enabled with measurement ID G-MSSGVSC9X3.
+                Google may use cookies or similar identifiers to measure visits,
+                sessions, device/browser information, and interaction patterns.
+                Visitors can manage cookies through their browser settings and
+                Google privacy controls.
               </p>
             </article>
 
