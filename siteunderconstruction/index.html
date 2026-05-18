@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A polished MH Horizon holding page for reserved hubs, with an animated construction scene and ivory-gold launch-node styling.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f8dfaa">
+  <meta property="og:title" content="Hub Under Construction | MH Horizon">
+  <meta property="og:description" content="A reserved MH Horizon hub is being prepared with a branded ivory-gold holding experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="construction-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hub Under Construction | MH Horizon">
+  <meta name="twitter:description" content="A reserved MH Horizon hub is being prepared with a branded ivory-gold holding experience.">
+  <meta name="twitter:image" content="construction-preview.svg">
+  <title>Hub Under Construction | MH Horizon</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="construction-page">
+  <div class="page-loader" aria-hidden="true">
+    <div class="loader-mark"></div>
+    <p class="loader-text">Rolling onto the site...</p>
+  </div>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <a class="brand-chip" href="../index.html" aria-label="Back to MH Horizon home">
+          <span>MH</span>
+          <strong>MH Horizon</strong>
+          <small>Reserved launch node</small>
+        </a>
+        <p class="eyebrow">Reserved Launch Node</p>
+        <h1 class="headline">
+          <span class="headline-static">SITE UNDER CONSTRUCT</span>
+          <span class="headline-tail" aria-label="ION, the last three letters being built">
+            <span data-letter-mark="I">I</span>
+            <span data-letter-mark="O">O</span>
+            <span data-letter-mark="N">N</span>
+          </span>
+        </h1>
+        <p class="subtitle">
+          This destination is being assembled inside the MH Horizon ecosystem. The route is reserved,
+          the node is visible, and the final <strong>ION</strong> is moving into place.
+        </p>
+        <a class="back-link" href="../gatewayToHub.html">Back to MH Horizon</a>
+      </div>
+
+      <section class="scene" id="scene" aria-label="Animated construction site building the letters I, O, and N">
+        <div class="sun"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="cloud cloud-three"></div>
+
+        <div class="skyline" aria-hidden="true">
+          <span class="tower tower-a"></span>
+          <span class="tower tower-b"></span>
+          <span class="tower tower-c"></span>
+          <span class="tower tower-d"></span>
+          <span class="tower tower-e"></span>
+          <span class="tower tower-f"></span>
+          <span class="tower tower-g"></span>
+        </div>
+
+        <div class="info-board">
+          <span class="info-label">Live Site Log</span>
+          <p class="info-status" id="statusText" aria-live="polite">Truck inbound with fresh steel.</p>
+          <div class="stats">
+            <div class="stat-card">
+              <span class="stat-name">Deliveries</span>
+              <strong class="stat-value" id="deliveryCount">00</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-name">Built</span>
+              <strong class="stat-value" id="progressCount">0 / 11</strong>
+            </div>
+          </div>
+          <div class="progress-panel">
+            <div class="progress-copy">
+              <span class="progress-label">ION Completion</span>
+              <strong class="progress-percent" id="progressPercent">0%</strong>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span class="progress-fill" id="progressFill"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blueprint-roll" aria-hidden="true"></div>
+        <div class="safety-sign" aria-hidden="true">
+          <span>Hard Hats</span>
+          <span>Progress Ahead</span>
+        </div>
+
+        <div class="dust-field" aria-hidden="true">
+          <span class="dust dust-one"></span>
+          <span class="dust dust-two"></span>
+          <span class="dust dust-three"></span>
+          <span class="dust dust-four"></span>
+          <span class="dust dust-five"></span>
+          <span class="dust dust-six"></span>
+        </div>
+
+        <div class="crane" aria-hidden="true">
+          <div class="crane-mast"></div>
+          <div class="crane-arm"></div>
+          <div class="crane-counter-arm"></div>
+          <div class="crane-cab"></div>
+          <div class="counterweight"></div>
+          <div class="crane-beacon"></div>
+        </div>
+
+        <div class="trolley" id="trolley" aria-hidden="true">
+          <div class="trolley-body"></div>
+        </div>
+        <div class="cable" id="cable" aria-hidden="true"></div>
+        <div class="hook" id="hook" aria-hidden="true">
+          <div class="hook-body"></div>
+          <div class="hook-anchor" id="hookAnchor"></div>
+        </div>
+
+        <div class="pickup-zone" id="pickupZone" aria-hidden="true">
+          <div class="pickup-ring"></div>
+          <div class="pickup-label">PICKUP PAD</div>
+          <div class="pickup-anchor" id="pickupAnchor"></div>
+        </div>
+
+        <div class="build-stage" aria-hidden="true">
+          <div class="deck"></div>
+          <div class="scaffold scaffold-left"></div>
+          <div class="scaffold scaffold-center"></div>
+          <div class="scaffold scaffold-right"></div>
+
+          <div class="letters">
+            <div class="letter letter-i" data-char="I">
+              <span class="segment segment-horizontal" id="seg-i-top" data-letter="I"></span>
+              <span class="segment segment-vertical" id="seg-i-upper" data-letter="I"></span>
+              <span class="segment segment-vertical" id="seg-i-lower" data-letter="I"></span>
+              <span class="segment segment-horizontal" id="seg-i-bottom" data-letter="I"></span>
+            </div>
+
+            <div class="letter letter-o" data-char="O">
+              <span class="segment segment-vertical" id="seg-o-left" data-letter="O"></span>
+              <span class="segment segment-horizontal" id="seg-o-top" data-letter="O"></span>
+              <span class="segment segment-vertical" id="seg-o-right" data-letter="O"></span>
+              <span class="segment segment-horizontal" id="seg-o-bottom" data-letter="O"></span>
+            </div>
+
+            <div class="letter letter-n" data-char="N">
+              <span class="segment segment-vertical" id="seg-n-left" data-letter="N"></span>
+              <span class="segment segment-diagonal" id="seg-n-diagonal" data-letter="N"></span>
+              <span class="segment segment-vertical" id="seg-n-right" data-letter="N"></span>
+            </div>
+          </div>
+
+          <div class="weld-flash" id="weldFlash"></div>
+        </div>
+
+        <div class="worker worker-left" aria-hidden="true">
+          <span class="worker-arm arm-left"></span>
+          <span class="worker-arm arm-right"></span>
+          <span class="worker-tool"></span>
+        </div>
+        <div class="worker worker-right" aria-hidden="true">
+          <span class="worker-arm arm-left"></span>
+          <span class="worker-arm arm-right"></span>
+          <span class="worker-tool"></span>
+        </div>
+        <div class="worker-sparks" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="crate" id="crate" aria-hidden="true">
+          <span class="crate-strap"></span>
+          <span class="crate-strap crate-strap-alt"></span>
+        </div>
+
+        <div class="truck" id="truck" aria-hidden="true">
+          <div class="truck-bed" id="truckBed">
+            <div class="bed-rim"></div>
+            <div class="truck-bed-anchor" id="truckBedAnchor"></div>
+          </div>
+          <div class="truck-cab">
+            <div class="truck-window"></div>
+            <div class="truck-headlight"></div>
+          </div>
+          <div class="truck-chassis"></div>
+          <div class="truck-exhaust" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="wheel wheel-back"></div>
+          <div class="wheel wheel-front"></div>
+        </div>
+
+        <div class="fence" aria-hidden="true"></div>
+        <div class="ground"></div>
+        <div class="road"></div>
+        <div class="lane-mark lane-mark-one" aria-hidden="true"></div>
+        <div class="lane-mark lane-mark-two" aria-hidden="true"></div>
+        <div class="barrier barrier-left" aria-hidden="true"></div>
+        <div class="barrier barrier-right" aria-hidden="true"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

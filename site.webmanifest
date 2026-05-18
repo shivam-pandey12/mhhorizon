@@ -1,0 +1,17 @@
+{
+  "name": "MH Horizon",
+  "short_name": "MH Horizon",
+  "description": "A premium frontend gateway for the creator-led MH Horizon network.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#03070d",
+  "theme_color": "#03070d",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "1659x944",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

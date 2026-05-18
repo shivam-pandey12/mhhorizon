@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Construction preview">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8d389"/>
+      <stop offset="0.55" stop-color="#f6e6c1"/>
+      <stop offset="1" stop-color="#cfb19a"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7dd72"/>
+      <stop offset="1" stop-color="#b78505"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <rect y="460" width="1200" height="170" fill="#3e2a22"/>
+  <rect y="520" width="1200" height="110" fill="#2f2d35"/>
+  <rect x="784" y="120" width="26" height="280" rx="10" fill="url(#steel)"/>
+  <rect x="390" y="120" width="430" height="18" rx="9" fill="url(#steel)"/>
+  <circle cx="795" cy="100" r="10" fill="#ff6b5e"/>
+  <rect x="295" y="390" width="122" height="72" rx="16" fill="#546b75"/>
+  <rect x="414" y="380" width="72" height="84" rx="18" fill="#f0c42d"/>
+  <circle cx="340" cy="474" r="26" fill="#141519"/>
+  <circle cx="446" cy="474" r="26" fill="#141519"/>
+  <rect x="624" y="238" width="44" height="162" rx="16" fill="#6f8a98"/>
+  <rect x="724" y="200" width="56" height="200" rx="16" fill="#6f8a98"/>
+  <rect x="830" y="250" width="56" height="150" rx="16" fill="#6f8a98"/>
+  <text x="98" y="164" fill="#251a18" font-family="Arial Black, Arial, sans-serif" font-size="82" letter-spacing="6">SITE UNDER CONSTRUCT</text>
+  <text x="890" y="164" fill="#f7f4ee" font-family="Arial Black, Arial, sans-serif" font-size="82" letter-spacing="6">ION</text>
+  <text x="98" y="242" fill="#523a2f" font-family="Trebuchet MS, Arial, sans-serif" font-size="28">A live crane-and-truck holding page building the final letters in motion.</text>
+</svg>

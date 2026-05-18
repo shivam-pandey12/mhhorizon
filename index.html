@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MH Horizon | One Horizon. Many Digital Worlds.</title>
+    <meta
+      name="description"
+      content="MH Horizon is the cinematic gateway to a growing universe of games, tools, learning, recipes, stories, and focused digital experiences."
+    />
+    <link rel="canonical" href="https://mhhorizons.com/" />
+    <meta name="theme-color" content="#03070d" />
+    <meta property="og:site_name" content="MH Horizon" />
+    <meta property="og:title" content="MH Horizon | One Horizon. Many Digital Worlds." />
+    <meta
+      property="og:description"
+      content="A premium static gateway for the MH Horizon ecosystem with an interactive orbital hub map, spotlighted destinations, and launch-ready brand polish."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://mhhorizons.com/assets/social-share.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta
+      property="og:image:alt"
+      content="MH Horizon social share artwork showing the brand, gateway message, and orbital hub system."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MH Horizon | One Horizon. Many Digital Worlds." />
+    <meta
+      name="twitter:description"
+      content="A premium static gateway for the MH Horizon ecosystem with an interactive orbital hub map, spotlighted destinations, and launch-ready brand polish."
+    />
+    <meta name="twitter:image" content="https://mhhorizons.com/assets/social-share.svg" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("mh-horizon-theme") || "dark";
+      document.documentElement.classList.add("is-preload");
+    </script>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script defer src="scripts/hubs.js"></script>
+    <script defer src="scripts/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script defer src="scripts/cinematic.js"></script>
+    <script defer src="scripts/vendor/three.global.js"></script>
+    <script defer src="scripts/gateway-three.js"></script>
+  </head>
+  <body class="site-body home-body">
+    <a class="skip-link" href="#main-content" data-no-transition="true">Skip to content</a>
+    <div class="page-transition" data-page-transition aria-hidden="true"></div>
+    <canvas class="cosmic-canvas" data-cosmic-canvas aria-hidden="true"></canvas>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="MH Horizon home">
+          <span class="brand-mark">MH</span>
+          <span class="brand-copy">
+            <strong>MH Horizon</strong>
+            <small>The master gateway</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" data-site-nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="#hubs">Hubs</a>
+          <a href="gatewayToHub.html">Gateway</a>
+          <a href="connect.html">Connect</a>
+        </nav>
+
+        <div class="header-utilities">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
+            <span class="theme-toggle-track">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-copy" data-theme-label>Dark mode</span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            Menu
+          </button>
+        </div>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <section class="hero section">
+          <div class="hero-copy reveal">
+            <p class="hero-kicker">The central gateway to the MH Horizon ecosystem</p>
+            <h1 class="hero-title" aria-label="MH Horizon">MH Horizon</h1>
+            <p class="hero-manifest" data-typing-text="One Horizon. Many Digital Worlds.">
+              One Horizon. Many Digital Worlds.
+            </p>
+            <p class="hero-subtitle">
+              A growing universe of games, tools, recipes, learning, stories, and
+              focused digital experiences, all launched from one premium orbital map.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary magnetic" href="gatewayToHub.html">Explore Hubs</a>
+              <a class="btn btn-secondary" href="#hubs">Discover Ecosystem</a>
+            </div>
+
+            <div class="metric-strip reveal">
+              <article class="metric-card">
+                <strong data-counter="0" data-hub-metric="total">0</strong>
+                <span>Connected nodes</span>
+              </article>
+              <article class="metric-card">
+                <strong data-counter="0" data-hub-metric="live">0</strong>
+                <span>Live destinations</span>
+              </article>
+              <article class="metric-card">
+                <strong data-counter="0" data-hub-metric="reserved">0</strong>
+                <span>Reserved launches</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="portal-frame home-orbit-frame" data-tilt data-home-orbit-stage>
+              <div class="home-orbit-atmosphere" aria-hidden="true">
+                <span class="home-orbit-haze home-orbit-haze-one"></span>
+                <span class="home-orbit-haze home-orbit-haze-two"></span>
+                <span class="home-orbit-scan"></span>
+              </div>
+              <div class="orbit-stage home-orbit-stage" aria-label="Interactive MH Horizon hub orbit map">
+                <div class="orbit-scene home-orbit-scene">
+                  <div class="orbit-floor" aria-hidden="true"></div>
+                  <div class="orbit-grid-glow" aria-hidden="true"></div>
+                  <canvas
+                    class="orbit-3d-canvas"
+                    data-orbit-3d-canvas
+                    data-orbit-3d-mode="home"
+                    tabindex="0"
+                    role="application"
+                    aria-label="Interactive 3D MH Horizon gateway. Drag to rotate the gateway, use arrow keys to choose a hub, and press Enter to open it."
+                  ></canvas>
+                  <div class="orbit-core home-orbit-core" aria-hidden="true">
+                    <span class="orbit-core-ring orbit-core-ring-one"></span>
+                    <span class="orbit-core-ring orbit-core-ring-two"></span>
+                  </div>
+                  <div class="orbit-system home-orbit-system" data-home-orbit-system></div>
+                </div>
+              </div>
+
+              <article class="home-orbit-preview" data-home-orbit-preview>
+                <div class="home-orbit-preview-top">
+                  <span class="hub-status hub-status-live" data-home-orbit-status>Live Node</span>
+                  <span class="hub-category" data-home-orbit-category>Games</span>
+                </div>
+                <h2 data-home-orbit-name>Game Hub</h2>
+                <p class="home-orbit-copy" data-home-orbit-copy>
+                  Play-first momentum with a dedicated hub identity.
+                </p>
+                <p class="home-orbit-note" data-home-orbit-note>
+                  Active hub marker inside the MH Horizon universe.
+                </p>
+                <a class="text-link home-orbit-entry" href="gatewayToHub.html" data-home-orbit-link>
+                  Enter selected node
+                </a>
+              </article>
+
+              <div class="floating-chip">Interactive orbital map</div>
+              <div class="floating-chip floating-chip-alt">Frontend-only gateway</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head reveal">
+            <p class="section-label">Gateway logic</p>
+            <h2 class="section-title">Small worlds. One horizon.</h2>
+            <p class="section-text">
+              MH Horizon turns separate destinations into a readable ecosystem:
+              every hub has a status, a purpose, and a clear path through the same
+              cinematic gateway identity.
+            </p>
+          </div>
+
+          <div class="intro-grid">
+            <article class="intro-card reveal" data-tilt>
+              <h3>Orbital discovery</h3>
+              <p>
+                The ring system makes the ecosystem visible immediately, with
+                hub nodes behaving like active worlds instead of plain links.
+              </p>
+            </article>
+            <article class="intro-card reveal" data-tilt>
+              <h3>Status-led routing</h3>
+              <p>
+                Live, beta, experimental, maintenance, and coming-soon nodes stay
+                honest and easy to understand.
+              </p>
+            </article>
+            <article class="intro-card reveal" data-tilt>
+              <h3>Premium launch shell</h3>
+              <p>
+                The gateway stays fast and hosting-friendly while feeling like
+                a polished launch surface for the full network.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head reveal">
+            <p class="section-label">Featured hubs</p>
+            <h2 class="section-title">Spotlight the strongest destinations before visitors choose a node.</h2>
+            <p class="section-text">
+              The live hubs lead the experience, while the rest of the system
+              still shows clear status, momentum, and future intent.
+            </p>
+          </div>
+
+          <div class="spotlight-grid" id="spotlight-grid"></div>
+
+          <article class="spotlight-quote reveal">
+            <p class="section-label">Experience note</p>
+            <blockquote>
+              MH Horizon makes separate hubs feel like one premium digital universe,
+              not a random collection of links.
+            </blockquote>
+            <p>
+              The spotlight layer helps people understand the strongest destinations
+              immediately while still keeping the full network discoverable.
+            </p>
+          </article>
+        </section>
+
+        <section class="section" id="hubs">
+          <div class="section-head reveal">
+            <p class="section-label">Hub network</p>
+            <h2 class="section-title">Every destination in the horizon map.</h2>
+            <p class="section-text">
+              Live nodes, maintenance bays, and under-construction portals all
+              stay connected under one smooth gateway experience.
+            </p>
+          </div>
+
+          <div class="hub-grid" id="hub-grid"></div>
+        </section>
+
+        <section class="section">
+          <article class="mission-panel reveal">
+            <div class="section-head">
+              <p class="section-label">About MH Horizon</p>
+              <h2 class="section-title">One identity above every hub.</h2>
+              <p class="section-text">
+                MH Horizon is the umbrella brand, launch layer, and premium
+                operating surface for the wider MH Horizon ecosystem.
+              </p>
+            </div>
+            <div class="mission-grid">
+              <p>
+                Instead of sending visitors straight into separate projects with
+                no shared context, MH Horizon gives the whole network one entrance,
+                one visual language, and one flagship presence.
+              </p>
+              <div class="support-strip">
+                <span class="support-pill">About page ready</span>
+                <span class="support-pill">Connect page ready</span>
+                <span class="support-pill">SEO foundations added</span>
+              </div>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-primary magnetic" href="about.html">Explore About</a>
+              <a class="btn btn-secondary" href="connect.html">Open Connect</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="pathway-grid">
+            <article class="glass-panel reveal" data-tilt>
+              <p class="section-label">Step 01</p>
+              <h3>Land on the flagship homepage</h3>
+              <p>
+                Visitors meet the MH Horizon identity first, understand the
+                network, and feel the premium visual direction immediately.
+              </p>
+            </article>
+
+            <article class="glass-panel reveal" data-tilt>
+              <p class="section-label">Step 02</p>
+              <h3>Open the black-space gateway</h3>
+              <p>
+                The second layer becomes a cinematic node selector with stacked
+                orbital rings and smooth focus transitions.
+              </p>
+            </article>
+
+            <article class="glass-panel reveal" data-tilt>
+              <p class="section-label">Step 03</p>
+              <h3>Focus on any hub</h3>
+              <p>
+                Clicking a ring zooms into that destination, reveals details,
+                and holds a reserved launch slot for the final link.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head reveal">
+            <p class="section-label">Launch roadmap</p>
+            <h2 class="section-title">A clear runway from current build to future expansion.</h2>
+            <p class="section-text">
+              The roadmap keeps visitors, collaborators, and future clients aware
+              of where the ecosystem is now and where it is going next.
+            </p>
+          </div>
+
+          <div class="roadmap-grid">
+            <article class="roadmap-card reveal">
+              <span class="roadmap-step">Now</span>
+              <h3>Core gateway online</h3>
+              <p>
+                The home page, orbital gateway, legal pages, connect flow, and
+                shared brand system are already in place.
+              </p>
+            </article>
+            <article class="roadmap-card reveal">
+              <span class="roadmap-step">Next</span>
+              <h3>Direct hub routing goes live</h3>
+              <p>
+                Final launch links are activated as each live node is connected
+                through the gateway, while maintenance and construction pages
+                stay in place where needed.
+              </p>
+            </article>
+            <article class="roadmap-card reveal">
+              <span class="roadmap-step">Soon</span>
+              <h3>Network storytelling expands</h3>
+              <p>
+                Add richer brand storytelling, more spotlight content, and
+                deeper hub presentation as the ecosystem grows.
+              </p>
+            </article>
+            <article class="roadmap-card reveal">
+              <span class="roadmap-step">Ongoing</span>
+              <h3>Unified flagship identity</h3>
+              <p>
+                Keep every new hub connected under one premium visual direction
+                instead of letting the system fragment.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="faq">
+          <div class="section-head reveal">
+            <p class="section-label">FAQ</p>
+            <h2 class="section-title">Quick answers before someone enters the network.</h2>
+            <p class="section-text">
+              A small FAQ helps visitors understand what MH Horizon is, how it
+              behaves, and what to expect from the hubs inside it.
+            </p>
+          </div>
+
+          <div class="faq-grid">
+            <details class="faq-item reveal">
+              <summary>What is MH Horizon?</summary>
+              <div class="faq-answer">
+                MH Horizon is the flagship frontend gateway that introduces and
+                routes visitors into the creator-led MH Horizon lineup of independent hubs.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>Does MH Horizon have a backend?</summary>
+              <div class="faq-answer">
+                No. It is intentionally frontend-only, because the hubs it connects
+                to are already fully furnished or reserved for future launch.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>Why are some hubs marked as maintenance or construction?</summary>
+              <div class="faq-answer">
+                Those labels help visitors understand whether a destination is live,
+                temporarily offline, or still being prepared for launch.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>Who adds new hubs to MH Horizon?</summary>
+              <div class="faq-answer">
+                New hubs are added by the MH Horizon owner and creator. Visitors do
+                not create or submit hubs through this site.
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="callout-card reveal">
+            <p class="section-label">Final launch pad</p>
+            <h2 class="section-title">Ready to open the MH Horizon gateway?</h2>
+            <p class="section-text">
+              Open the black-space portal, hover every ring, and move through the
+              hub network like a central command experience.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary magnetic" href="gatewayToHub.html">Launch Gateway</a>
+              <a class="btn btn-secondary" href="connect.html">Open Connect</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div>
+            <a class="brand footer-brand" href="index.html">
+              <span class="brand-mark">MH</span>
+              <span class="brand-copy">
+                <strong>MH Horizon</strong>
+                <small>Flagship gateway frontend</small>
+              </span>
+            </a>
+            <p class="footer-note">
+              A premium static launch surface for the MH Horizon lineup, connected
+              through one strong visual identity.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <a href="about.html">About MH Horizon</a>
+            <a href="gatewayToHub.html">Gateway</a>
+            <a href="connect.html">Connect</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="disclaimer.html">Disclaimer</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>Copyright <span data-current-year></span> MH Horizon</span>
+          <span>Powered by MH Horizon | v1.2.0</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

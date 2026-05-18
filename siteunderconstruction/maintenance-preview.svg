@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Maintenance preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbfeff"/>
+      <stop offset="0.58" stop-color="#eaf7fc"/>
+      <stop offset="1" stop-color="#d8edf4"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#59f5db" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#59f5db"/>
+      <stop offset="1" stop-color="#59f5db" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="650" y="150" width="430" height="300" rx="28" fill="#f8fdff" stroke="#7bbcc7" stroke-width="4"/>
+  <rect x="86" y="116" width="332" height="244" rx="24" fill="#ffffff" stroke="#bedbe4" stroke-width="4"/>
+  <rect x="108" y="380" width="250" height="70" rx="18" fill="#ffffff" stroke="#bedbe4" stroke-width="4"/>
+  <rect x="716" y="220" width="20" height="170" rx="10" fill="#5beed6"/>
+  <rect x="824" y="192" width="128" height="20" rx="10" fill="#5beed6"/>
+  <rect x="824" y="302" width="92" height="20" rx="10" fill="#5beed6"/>
+  <rect x="824" y="374" width="128" height="20" rx="10" fill="#5beed6"/>
+  <ellipse cx="512" cy="366" rx="56" ry="56" fill="#7fdae2"/>
+  <ellipse cx="512" cy="366" rx="36" ry="36" fill="#2d7992"/>
+  <rect x="502" y="392" width="20" height="68" rx="10" fill="#8da5b6"/>
+  <rect x="458" y="450" width="120" height="18" rx="9" fill="#c4d5df"/>
+  <rect x="694" y="264" width="342" height="6" rx="3" fill="url(#beam)"/>
+  <text x="86" y="168" fill="#18384d" font-family="Arial Black, Arial, sans-serif" font-size="74" letter-spacing="6">SITE UNDER MAINTENA</text>
+  <text x="896" y="168" fill="#1c7a90" font-family="Arial Black, Arial, sans-serif" font-size="74" letter-spacing="6">NCE</text>
+  <text x="86" y="234" fill="#3a5869" font-family="Trebuchet MS, Arial, sans-serif" font-size="28">A bright service lab restoring the final letters with bots, scans, and diagnostics.</text>
+</svg>

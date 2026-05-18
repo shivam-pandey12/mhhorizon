@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A polished MH Horizon maintenance page for paused hubs, with diagnostics, repair motion, and ivory-gold service styling.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f8dfaa">
+  <meta property="og:title" content="Hub Under Maintenance | MH Horizon">
+  <meta property="og:description" content="A paused MH Horizon hub is being recalibrated with a branded ivory-gold maintenance experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="maintenance-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hub Under Maintenance | MH Horizon">
+  <meta name="twitter:description" content="A paused MH Horizon hub is being recalibrated with a branded ivory-gold maintenance experience.">
+  <meta name="twitter:image" content="maintenance-preview.svg">
+  <title>Hub Under Maintenance | MH Horizon</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="maintenance.css">
+</head>
+<body class="maintenance-page">
+  <div class="page-loader" aria-hidden="true">
+    <div class="loader-mark"></div>
+    <p class="loader-text">Booting the service lab...</p>
+  </div>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <a class="brand-chip" href="../index.html" aria-label="Back to MH Horizon home">
+          <span>MH</span>
+          <strong>MH Horizon</strong>
+          <small>Service node</small>
+        </a>
+        <p class="eyebrow">Scheduled Service Node</p>
+        <h1 class="headline">
+          <span class="headline-static">SITE UNDER MAINTENA</span>
+          <span class="headline-tail" aria-label="NCE, the last three letters being repaired">
+            <span data-letter-mark="N">N</span>
+            <span data-letter-mark="C">C</span>
+            <span data-letter-mark="E">E</span>
+          </span>
+        </h1>
+        <p class="subtitle">
+          This hub is temporarily paused while the service layer is recalibrated. Diagnostics are
+          fitting fresh modules and bringing <strong>NCE</strong> back online.
+        </p>
+        <a class="back-link" href="../gatewayToHub.html">Back to MH Horizon</a>
+      </div>
+
+      <section class="scene" id="scene" aria-label="Animated maintenance bay repairing the letters N, C, and E">
+        <div class="ambient-glow glow-one"></div>
+        <div class="ambient-glow glow-two"></div>
+        <div class="ceiling-grid" aria-hidden="true"></div>
+
+        <div class="status-panel">
+          <span class="panel-label">Maintenance Console</span>
+          <p class="panel-status" id="statusText" aria-live="polite">Service cart preparing the next repair module.</p>
+          <div class="panel-stats">
+            <div class="stat-card">
+              <span class="stat-name">Cycles</span>
+              <strong class="stat-value" id="cycleCount">00</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-name">Restored</span>
+              <strong class="stat-value" id="progressCount">0 / 10</strong>
+            </div>
+          </div>
+          <div class="diag-grid">
+            <div class="diag-card">
+              <span class="diag-name">System Health</span>
+              <div class="health-track" aria-hidden="true">
+                <span class="health-fill" id="healthFill"></span>
+              </div>
+              <strong class="diag-value" id="healthValue">92%</strong>
+            </div>
+            <div class="diag-card">
+              <span class="diag-name">Uptime</span>
+              <strong class="diag-value" id="uptimeValue">00:00:00</strong>
+            </div>
+          </div>
+          <div class="repair-log">
+            <span class="diag-name">Repair Log</span>
+            <ul class="log-list" id="logList">
+              <li>Diagnostics queued for startup</li>
+              <li>Cooling lattice synchronized</li>
+              <li>Module rack standing by</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="monitor-stack" aria-hidden="true">
+          <span class="monitor monitor-a"></span>
+          <span class="monitor monitor-b"></span>
+          <span class="monitor monitor-c"></span>
+        </div>
+
+        <div class="diag-ribbon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="cooling-fan fan-left" aria-hidden="true">
+          <span class="fan-hub"></span>
+        </div>
+        <div class="cooling-fan fan-right" aria-hidden="true">
+          <span class="fan-hub"></span>
+        </div>
+
+        <div class="tool-rack" aria-hidden="true">
+          <span class="tool tool-one"></span>
+          <span class="tool tool-two"></span>
+          <span class="tool tool-three"></span>
+        </div>
+
+        <div class="dock-pad" aria-hidden="true">
+          <div class="dock-ring"></div>
+          <div class="dock-label">BOT DOCK</div>
+          <div class="dock-anchor" id="dockAnchor"></div>
+          <div class="bot-rest-anchor" id="botRestAnchor"></div>
+        </div>
+
+        <div class="repair-bay" id="repairBay" aria-hidden="true">
+          <div class="repair-grid"></div>
+          <div class="holo-shell"></div>
+          <div class="scan-line scan-line-a"></div>
+          <div class="scan-line scan-line-b"></div>
+          <div class="letters">
+            <div class="letter letter-n" data-char="N">
+              <span class="segment segment-vertical" id="seg-n-left" data-letter="N"></span>
+              <span class="segment segment-diagonal" id="seg-n-diagonal" data-letter="N"></span>
+              <span class="segment segment-vertical" id="seg-n-right" data-letter="N"></span>
+            </div>
+
+            <div class="letter letter-c" data-char="C">
+              <span class="segment segment-horizontal" id="seg-c-top" data-letter="C"></span>
+              <span class="segment segment-vertical" id="seg-c-left" data-letter="C"></span>
+              <span class="segment segment-horizontal" id="seg-c-bottom" data-letter="C"></span>
+            </div>
+
+            <div class="letter letter-e" data-char="E">
+              <span class="segment segment-horizontal" id="seg-e-top" data-letter="E"></span>
+              <span class="segment segment-vertical" id="seg-e-left" data-letter="E"></span>
+              <span class="segment segment-horizontal" id="seg-e-middle" data-letter="E"></span>
+              <span class="segment segment-horizontal" id="seg-e-bottom" data-letter="E"></span>
+            </div>
+          </div>
+          <div class="pulse-ring" id="pulseRing"></div>
+        </div>
+
+        <div class="service-bot" id="serviceBot" aria-hidden="true">
+          <div class="bot-halo"></div>
+          <div class="bot-core">
+            <span class="bot-eye"></span>
+          </div>
+          <div class="bot-arm"></div>
+          <div class="bot-claw" id="botAnchor"></div>
+        </div>
+
+        <div class="service-module" id="serviceModule" aria-hidden="true">
+          <span class="module-strip"></span>
+          <span class="module-strip module-strip-alt"></span>
+        </div>
+
+        <div class="supply-cart" id="supplyCart" aria-hidden="true">
+          <div class="cart-light"></div>
+          <div class="cart-bed">
+            <div class="cart-anchor" id="cartAnchor"></div>
+          </div>
+          <div class="cart-body"></div>
+          <div class="cart-wheel cart-wheel-left"></div>
+          <div class="cart-wheel cart-wheel-right"></div>
+        </div>
+
+        <div class="floor"></div>
+        <div class="track"></div>
+        <div class="floor-lights" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="reboot-flash" id="rebootFlash" aria-hidden="true"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="maintenance.js"></script>
+</body>
+</html>
