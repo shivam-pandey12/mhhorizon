@@ -7,6 +7,7 @@ Static gateway website for the MH Horizon ecosystem.
 - Game Hub: https://gamehub.mhhorizons.com/
 - Informative Hub: https://informativehub.mhhorizons.com/
 - Recipify Hub: https://recipify.mhhorizons.com/
+- FocusForge: https://focusforge.mhhorizon.com/
 - PythonLab: https://pythonlab.mhhorizons.com/
 
 ## GitHub Pages
