@@ -56,7 +56,7 @@ window.MHHorizonHubs = [
       "The live MH Horizon productivity destination for focused work sessions, personal momentum, and calmer task structure.",
     tagline: "Built for focus, habit, and steady execution.",
     features: ["Live at focusforge.mhhorizon.com", "Focus sessions", "Productive flow"],
-    link: "https://focusforge.mhhorizon.com/",
+    link: "https://focusforge.mhhorizons.com/",
     note: "Online now at focusforge.mhhorizon.com.",
   },
   {
