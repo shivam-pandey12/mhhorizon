@@ -9,6 +9,7 @@ Static gateway website for the MH Horizon ecosystem.
 - Recipify Hub: https://recipify.mhhorizons.com/
 - FocusForge: https://focusforge.mhhorizon.com/
 - PythonLab: https://pythonlab.mhhorizons.com/
+- Quizora: https://quizora.mhhorizons.com/
 
 ## GitHub Pages
 
