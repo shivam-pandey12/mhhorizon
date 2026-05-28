@@ -104,15 +104,15 @@ window.MHHorizonHubs = [
   {
     id: "fictionalis-hub",
     name: "Fictionalis Hub",
-    category: "Stories",
-    status: "Coming Soon",
-    state: "coming-soon",
+    category: "Maintenance",
+    status: "Maintenance Bay",
+    state: "maintenance",
     description:
-      "A narrative-led hub prepared for fiction, atmosphere, and story-driven digital experiences.",
-    tagline: "A story portal waiting for its official world to open.",
-    features: ["Narrative preview", "Atmospheric writing", "Future content stage"],
-    link: "siteunderconstruction/index.html",
-    note: "Currently routed to the construction holding page until Fictionalis Hub opens.",
+      "A narrative-led hub currently held in maintenance while its fiction, atmosphere, and story-driven experience is prepared.",
+    tagline: "A story portal being serviced before its official world opens.",
+    features: ["Maintenance mode", "Story hub preparation", "Future content stage"],
+    link: "siteunderconstruction/maintenance.html",
+    note: "Currently routed to the maintenance holding page while Fictionalis Hub is serviced.",
   },
   {
     id: "3d-modination-hub",
