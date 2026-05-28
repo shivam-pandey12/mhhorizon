@@ -65,12 +65,13 @@ window.MHHorizonHubs = [
     category: "Utilities",
     status: "Live Node",
     state: "live",
+    logo: "tools.png",
     description:
-      "A practical utility branch for quick workflows, creator tools, and task-friendly digital helpers.",
-    tagline: "Function-forward experiences built for usefulness and speed.",
-    features: ["Tool workflows", "Practical helpers", "Clean utility focus"],
-    link: "#",
-    note: "Direct launch routing for this node will appear here when the public MH Tools link goes live.",
+      "The live MH Horizon utility destination for quick workflows, creator tools, media helpers, and task-friendly digital utilities.",
+    tagline: "Function-forward tools built for usefulness, speed, and clean everyday workflows.",
+    features: ["Live at tools.mhhorizons.com", "Tool workflows", "Media & link utilities"],
+    link: "https://tools.mhhorizons.com/",
+    note: "Online now at tools.mhhorizons.com.",
   },
   {
     id: "pythonlab",
