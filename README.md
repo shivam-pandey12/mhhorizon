@@ -9,6 +9,7 @@ Static gateway website for the MH Horizon ecosystem.
 - Recipify Hub: https://recipify.mhhorizons.com/
 - FocusForge: https://focusforge.mhhorizon.com/
 - MH Tools: https://tools.mhhorizons.com/
+- Nexus Chat: https://nexus.mhhorizons.com/
 - PythonLab: https://pythonlab.mhhorizons.com/
 - Quizora: https://quizora.mhhorizons.com/
 
