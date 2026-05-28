@@ -1706,6 +1706,7 @@ img {
 
 .ring-track {
   animation: orbitTilted var(--orbit-duration) linear infinite;
+  animation-delay: var(--orbit-delay, 0s);
 }
 
 .ring-ball {

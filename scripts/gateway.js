@@ -148,13 +148,18 @@ function renderRings(container) {
   const compact = window.innerWidth < 600;
   const mid = window.innerWidth < 980;
   const baseSize = compact ? 28 : mid ? 34 : 40;
-  const sizeStep = compact ? 8 : 10;
+  const maxSize = compact ? 92 : mid ? 114 : 120;
+  const minDuration = 12.5;
+  const maxDuration = 22.5;
+  const count = gatewayHubs.length;
 
   container.innerHTML = gatewayHubs
     .map((hub, index) => {
-      const size = baseSize + index * sizeStep;
+      const progress = count > 1 ? index / (count - 1) : 0;
+      const size = baseSize + (maxSize - baseSize) * progress;
       const hue = getGatewayHue(hub.state);
-      const duration = 12.5 + index * 1.25;
+      const duration = minDuration + (maxDuration - minDuration) * progress;
+      const delay = -(duration * progress * 0.82);
 
       return `
         <button
@@ -162,7 +167,7 @@ function renderRings(container) {
           type="button"
           data-hub-id="${hub.id}"
           aria-label="Open ${hub.name}"
-          style="--ring-size:${size}px; --ring-hue:${hue}; --orbit-duration:${duration}s;"
+          style="--ring-size:${size}px; --ring-hue:${hue}; --orbit-duration:${duration}s; --orbit-delay:${delay.toFixed(2)}s;"
         >
           <span class="ring-shell"></span>
           <span class="ring-track">

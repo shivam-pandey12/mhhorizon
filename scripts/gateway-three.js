@@ -180,21 +180,29 @@ function initOrbit3DGateway(canvas) {
 
   function buildRings() {
     const count = hubs.length;
-    const center = (count - 1) / 2;
+    const minRadius = 0.62;
+    const maxRadius = 2.14;
+    const maxStackY = 1.28;
+    const maxStackZ = 0.14;
+    const minDuration = 26;
+    const maxDuration = 50.8;
+    const startAngle = Math.PI * 0.18;
+    const maxAngleSweep = Math.PI * 1.72;
 
     hubs.forEach((hub, index) => {
       const hueColor = getHubColor(THREE, hub.state);
-      const layer = index - center;
-      const y = -layer * 0.32;
-      const z = layer * 0.035;
-      const radius = 0.62 + index * 0.19;
+      const progress = count > 1 ? index / (count - 1) : 0;
+      const y = count > 1 ? maxStackY - progress * maxStackY * 2 : 0;
+      const z = count > 1 ? -maxStackZ + progress * maxStackZ * 2 : 0;
+      const radius = minRadius + (maxRadius - minRadius) * progress;
       const tiltX = Math.PI / 2;
       const tiltY = 0;
       const tiltZ = 0;
-      const duration = 26 + index * 3.1;
-      const angle = index * 0.68 + Math.PI * 0.18;
+      const duration = minDuration + (maxDuration - minDuration) * progress;
+      const angle = startAngle + maxAngleSweep * progress;
       const entryGroup = new THREE.Group();
       const ringGroup = new THREE.Group();
+      const nodeSize = 0.108 - progress * 0.022;
 
       entryGroup.position.set(0, y, z);
       entryGroup.rotation.set(tiltX, tiltY, tiltZ);
@@ -277,7 +285,7 @@ function initOrbit3DGateway(canvas) {
         "node",
         hub.state
       );
-      const node = new THREE.Mesh(new THREE.SphereGeometry(index < 4 ? 0.108 : 0.086, 30, 24), nodeMaterial);
+      const node = new THREE.Mesh(new THREE.SphereGeometry(nodeSize, 30, 24), nodeMaterial);
       nodeGroup.add(node);
 
       entryGroup.add(ringGroup, nodeGroup);

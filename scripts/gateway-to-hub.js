@@ -329,16 +329,22 @@ function getGatewayStateLabel(state) {
 function renderOrbits(container) {
   const compact = window.innerWidth < 680;
   const baseSize = compact ? 50 : 64;
-  const sizeStep = compact ? 14 : 18;
   const baseOffset = compact ? -148 : -176;
-  const offsetStep = compact ? 27 : 34;
+  const maxSize = compact ? 162 : 208;
+  const maxOffset = compact ? 68 : 96;
+  const minDuration = 18;
+  const maxDuration = 37.2;
+  const maxPhase = Math.PI * 1.84;
+  const count = orbitGatewayHubs.length;
 
   container.innerHTML = orbitGatewayHubs
     .map((hub, index) => {
       const hue = getOrbitHue(hub.state);
-      const size = baseSize + index * sizeStep;
-      const offset = baseOffset + index * offsetStep;
-      const duration = 18 + index * 2.4;
+      const progress = count > 1 ? index / (count - 1) : 0;
+      const size = baseSize + (maxSize - baseSize) * progress;
+      const offset = baseOffset + (maxOffset - baseOffset) * progress;
+      const duration = minDuration + (maxDuration - minDuration) * progress;
+      const phase = maxPhase * progress;
 
       return `
         <button
@@ -357,7 +363,7 @@ function renderOrbits(container) {
             <span
               class="orbit-satellite"
               data-duration="${duration}"
-              data-phase="${(index * 0.78).toFixed(2)}"
+              data-phase="${phase.toFixed(2)}"
             ></span>
           </span>
           <span class="orbit-label">${hub.name}</span>

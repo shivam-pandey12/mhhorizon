@@ -526,16 +526,22 @@ function initHomeOrbitGateway() {
   function renderHomeOrbits(container) {
     const compact = window.innerWidth < 640;
     const baseSize = compact ? 48 : 62;
-    const sizeStep = compact ? 13 : 17;
     const baseOffset = compact ? -126 : -158;
-    const offsetStep = compact ? 24 : 31;
+    const maxSize = compact ? 152 : 198;
+    const maxOffset = compact ? 66 : 90;
+    const minDuration = 20;
+    const maxDuration = 36.8;
+    const maxPhase = Math.PI * 1.82;
+    const count = hubs.length;
 
     container.innerHTML = hubs
       .map((hub, index) => {
         const hue = stateHue[hub.state] || 186;
-        const size = baseSize + index * sizeStep;
-        const offset = baseOffset + index * offsetStep;
-        const duration = 20 + index * 2.1;
+        const progress = count > 1 ? index / (count - 1) : 0;
+        const size = baseSize + (maxSize - baseSize) * progress;
+        const offset = baseOffset + (maxOffset - baseOffset) * progress;
+        const duration = minDuration + (maxDuration - minDuration) * progress;
+        const phase = maxPhase * progress;
 
         return `
           <button
@@ -547,13 +553,13 @@ function initHomeOrbitGateway() {
           >
             <span class="orbit-path"></span>
             <span class="orbit-glow"></span>
-            <span class="orbit-track">
-              <span
-                class="orbit-satellite"
-                data-duration="${duration}"
-                data-phase="${(index * 0.72).toFixed(2)}"
-              ></span>
-            </span>
+          <span class="orbit-track">
+            <span
+              class="orbit-satellite"
+              data-duration="${duration}"
+              data-phase="${phase.toFixed(2)}"
+            ></span>
+          </span>
             <span class="orbit-label">${hub.name}</span>
           </button>
         `;

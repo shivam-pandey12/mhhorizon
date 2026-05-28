@@ -102,6 +102,20 @@ window.MHHorizonHubs = [
     note: "Online now at quizora.mhhorizons.com.",
   },
   {
+    id: "nexus-chat",
+    name: "Nexus Chat",
+    category: "Communication",
+    status: "Live Node",
+    state: "live",
+    logo: "nexus_logo.png",
+    description:
+      "The live MH Horizon communication destination for chat-first conversations, social connection, and real-time community presence.",
+    tagline: "A live communication hub for fast conversations and connected rooms.",
+    features: ["Live at nexus.mhhorizons.com", "Chat rooms", "Real-time communication"],
+    link: "https://nexus.mhhorizons.com/",
+    note: "Online now at nexus.mhhorizons.com.",
+  },
+  {
     id: "fictionalis-hub",
     name: "Fictionalis Hub",
     category: "Maintenance",
@@ -126,19 +140,5 @@ window.MHHorizonHubs = [
     features: ["3D identity", "Motion experiments", "Immersive concepts"],
     link: "siteunderconstruction/index.html",
     note: "Currently routed to the construction holding page until 3D Modination Hub opens.",
-  },
-  {
-    id: "nexus-chat",
-    name: "Nexus Chat",
-    category: "Communication",
-    status: "Live Node",
-    state: "live",
-    logo: "nexus_logo.png",
-    description:
-      "The live MH Horizon communication destination for chat-first conversations, social connection, and real-time community presence.",
-    tagline: "A live communication hub for fast conversations and connected rooms.",
-    features: ["Live at nexus.mhhorizons.com", "Chat rooms", "Real-time communication"],
-    link: "https://nexus.mhhorizons.com/",
-    note: "Online now at nexus.mhhorizons.com.",
   },
 ];
