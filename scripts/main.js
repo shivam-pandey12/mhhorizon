@@ -549,14 +549,14 @@ function initHomeOrbitGateway() {
             type="button"
             data-hub-id="${hub.id}"
             aria-label="Preview ${hub.name}"
-            style="--orbit-size:${size}px; --orbit-offset:${offset}px; --orbit-hue:${hue}; --orbit-duration:${duration}s;"
+            style="--orbit-size:${size.toFixed(2)}px; --orbit-offset:${offset.toFixed(2)}px; --orbit-hue:${hue}; --orbit-duration:${duration.toFixed(2)}s;"
           >
             <span class="orbit-path"></span>
             <span class="orbit-glow"></span>
           <span class="orbit-track">
             <span
               class="orbit-satellite"
-              data-duration="${duration}"
+              data-duration="${duration.toFixed(2)}"
               data-phase="${phase.toFixed(2)}"
             ></span>
           </span>

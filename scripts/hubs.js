@@ -116,6 +116,20 @@ window.MHHorizonHubs = [
     note: "Online now at nexus.mhhorizons.com.",
   },
   {
+    id: "launch-forge",
+    name: "Launch Forge",
+    category: "Launch",
+    status: "Live Node",
+    state: "live",
+    logo: "launchforge_logo.png",
+    description:
+      "The live MH Horizon launch toolkit for indie builders to prepare, package, publish, and track product launches from one premium dashboard.",
+    tagline: "Launch Radar, Auto Audit, Brand Vault, Dispatch, and Launch Health in one calm launch control room.",
+    features: ["Live at launchforge.mhhorizons.com", "Launch Radar & Auto Audit", "Dispatch pages & Launch Health"],
+    link: "https://launchforge.mhhorizons.com/",
+    note: "Online now at launchforge.mhhorizons.com.",
+  },
+  {
     id: "fictionalis-hub",
     name: "Fictionalis Hub",
     category: "Maintenance",

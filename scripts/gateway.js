@@ -167,7 +167,7 @@ function renderRings(container) {
           type="button"
           data-hub-id="${hub.id}"
           aria-label="Open ${hub.name}"
-          style="--ring-size:${size}px; --ring-hue:${hue}; --orbit-duration:${duration}s; --orbit-delay:${delay.toFixed(2)}s;"
+          style="--ring-size:${size.toFixed(2)}px; --ring-hue:${hue}; --orbit-duration:${duration.toFixed(2)}s; --orbit-delay:${delay.toFixed(2)}s;"
         >
           <span class="ring-shell"></span>
           <span class="ring-track">
